@@ -1,30 +1,30 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "p1k0chu-qol-mod",
   "version": "${version}",
-  "name": "Example mod",
-  "description": "Description",
+  "name": "p1k0chu QOL mod",
+  "description": "My mod for QOL (with hacks)",
   "authors": [
-    "Me!"
+    "p1k0chu"
   ],
   "contact": {
-    "homepage": "https://example.org/",
-    "sources": "https://github.com/p1k0chu/fabric-mod-template-java"
+    "homepage": "https://p1kachu.bsky.social",
+    "sources": "https://github.com/p1k0chu/p1k0chu-qol-mc-mod"
   },
   "license": "MIT",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "org.example.Main"
+      "io.github.p1k0chu.mcmod.qolhacks.Main"
     ],
     "client": [
-      "org.example.client.MainClient"
+      "io.github.p1k0chu.mcmod.qolhacks.client.MainClient"
     ]
   },
   "mixins": [
-    "modid.mixins.json",
+    "p1k0chu-qol-mod.mixins.json",
     {
-      "config": "modid.client.mixins.json",
+      "config": "p1k0chu-qol-mod.client.mixins.json",
       "environment": "client"
     }
   ],
