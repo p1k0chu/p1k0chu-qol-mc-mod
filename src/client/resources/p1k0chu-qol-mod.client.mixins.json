@@ -3,6 +3,7 @@
   "package": "io.github.p1k0chu.mcmod.qolhacks.client.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
+    "LocalPlayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
