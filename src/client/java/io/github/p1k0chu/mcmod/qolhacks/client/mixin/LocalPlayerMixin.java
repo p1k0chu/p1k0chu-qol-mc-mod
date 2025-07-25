@@ -1,6 +1,5 @@
 package io.github.p1k0chu.mcmod.qolhacks.client.mixin;
 
-import io.github.p1k0chu.mcmod.qolhacks.client.MainClient;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.PlayerRideableJumping;
 import net.minecraft.world.entity.player.Input;
@@ -19,7 +18,7 @@ public abstract class LocalPlayerMixin {
 
     @Redirect(method = "aiStep", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Input;jump()Z", ordinal = 0))
     boolean getJump(Input instance) {
-        return !isElytraSpamEnabled() || (jumpableVehicle() != null || cast().getAbilities().mayfly) && instance.jump();
+        return instance.jump() && !isElytraSpamEnabled() || (jumpableVehicle() != null || cast().getAbilities().mayfly);
     }
 
     @Unique
