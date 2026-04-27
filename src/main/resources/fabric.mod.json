@@ -11,7 +11,7 @@
     "homepage": "https://p1kachu.bsky.social",
     "sources": "https://github.com/p1k0chu/p1k0chu-qol-mc-mod"
   },
-  "license": "MIT",
+  "license": "LGPL-3.0-or-later",
   "environment": "*",
   "entrypoints": {
     "main": [

@@ -8,6 +8,12 @@ Probably considered cheating by most people. idc if you use it on servers, but i
 
 - Elytra spam: toggle with `V`
 
-## Downloads
+## License
 
-The mod jar can be found in [actions](https://github.com/p1k0chu/p1k0chu-qol-mc-mod/actions) (each workflow run should have `mod_jar` zip file)
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+See file `LICENSE` for full text of the license.
+
