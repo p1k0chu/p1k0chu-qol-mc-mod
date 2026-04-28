@@ -4,19 +4,22 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.KeyMapping;
+import net.minecraft.client.KeyMapping.Category;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvents;
-import org.lwjgl.glfw.GLFW;
+import com.mojang.blaze3d.platform.InputConstants;
 
+import static io.github.p1k0chu.mcmod.qolhacks.Main.MOD_ID;
 import static io.github.p1k0chu.mcmod.qolhacks.constants.TranslationsConstants.*;
 
 public final class MainClient implements ClientModInitializer {
-    public static final KeyMapping elytraSpamToggle = new KeyMapping(ELYTRA_SPAM_KEY, GLFW.GLFW_KEY_V, KEY_CATEGORY_KEY);
-
+    private static final Category KEY_CATEGORY = Category.register(Identifier.fromNamespaceAndPath(MOD_ID, "misc"));
     private static boolean elytraSpamEnabled = false;
 
     @Override
     public void onInitializeClient() {
+        KeyMapping elytraSpamToggle = new KeyMapping(ELYTRA_SPAM_KEY, InputConstants.UNKNOWN.getValue(), KEY_CATEGORY);
         KeyBindingHelper.registerKeyBinding(elytraSpamToggle);
 
         ClientTickEvents.END_CLIENT_TICK.register((minecraft) -> {

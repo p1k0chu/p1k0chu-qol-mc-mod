@@ -1,57 +1,47 @@
-##################################################################
-# https://github.com/github/gitignore/blob/main/Gradle.gitignore #
-##################################################################
-.gradle
-**/build/
-!**/src/**/build/
+# gradle
 
-# Ignore Gradle GUI config
-gradle-app.setting
+.gradle/
+build/
+out/
+classes/
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
+# eclipse
 
-# Avoid ignore Gradle wrappper properties
-!gradle-wrapper.properties
+*.launch
 
-# Cache of project
-.gradletasknamecache
+# idea
 
-# Eclipse Gradle plugin generated files
-# Eclipse Core
-.project
-# JDT-specific (Eclipse Java Development Tools)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# vscode
+
+.settings/
+.vscode/
+bin/
 .classpath
+.project
 
-################################################################
-# https://github.com/github/gitignore/blob/main/Java.gitignore #
-################################################################
-# Compiled class file
-*.class
+# macos
 
-# Log file
-*.log
+*.DS_Store
 
-# BlueJ files
-*.ctxt
+# fabric
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+run/
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+# java
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
 
-# ------------------------------------------------------------ #
+# emacs
+*~
+\#*\#
+.#*
+/.eglot-java
 
-.idea
-/run

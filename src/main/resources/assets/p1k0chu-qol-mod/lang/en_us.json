@@ -1,5 +1,5 @@
 {
-  "p1k0chu_qol_mod.key_category": "p1k0chu's QOL mod",
+  "key.category.p1k0chu-qol-mod.misc": "p1k0chu's QOL mod",
   "p1k0chu_qol_mod.key.elytra_spam": "Toggle elytra jump spam",
   "p1k0chu_qol_mod.function.elytra_spam.enabled": "Elytra spam enabled",
   "p1k0chu_qol_mod.function.elytra_spam.disabled": "Elytra spam disabled"
