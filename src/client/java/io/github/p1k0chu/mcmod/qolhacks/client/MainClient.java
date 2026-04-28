@@ -2,7 +2,7 @@ package io.github.p1k0chu.mcmod.qolhacks.client;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.KeyMapping.Category;
 import net.minecraft.network.chat.Component;
@@ -20,7 +20,7 @@ public final class MainClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         KeyMapping elytraSpamToggle = new KeyMapping(ELYTRA_SPAM_KEY, InputConstants.UNKNOWN.getValue(), KEY_CATEGORY);
-        KeyBindingHelper.registerKeyBinding(elytraSpamToggle);
+        KeyMappingHelper.registerKeyMapping(elytraSpamToggle);
 
         ClientTickEvents.END_CLIENT_TICK.register((minecraft) -> {
             while (elytraSpamToggle.consumeClick()) {
@@ -33,7 +33,10 @@ public final class MainClient implements ClientModInitializer {
                     component = ELYTRA_SPAM_DISABLED;
                 }
                 if (minecraft.player != null) {
-                    minecraft.player.displayClientMessage(component, false);
+                    //? >=26.1 {
+                    minecraft.player.sendOverlayMessage(component);
+                    //? } else
+                    //minecraft.player.displayClientMessage(component, true);
                     minecraft.player.playSound(SoundEvents.AMETHYST_BLOCK_RESONATE);
                 }
             }
